@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 需求：每一个学生会自我介绍（叫什么、多大了）、敲代码、唱歌
+    // 对象有什么属性？  姓名和年龄
+    // 对象有什么方法？  自我介绍、敲代码、唱歌
+
+    // 定义构造函数
+    function Student(name, age) {
+      // 属性
+      this.name = name;
+      this.age = age;
+      // 方法
+      this.sayHi = function () {
+        console.log('我叫' + this.name + '，今年' + this.age);
+      }
+      this.writeCode = function () {
+        console.log('我会编程！');
+      }
+      this.sing = function () {
+        console.log("我会唱歌")
+      }
+    }
+
+
+    // 创建对象
+    // 一个函数是普通函数还构造函数，不是在定义时决定的，而是在调用时决定
+    // Student();  → 普通函数
+    // var stu1 = new Student('张三',10); 
+    // var stu2 = new Student('张三',10);
+    // console.log(stu1===stu2);  // false 比较的是在内存中的地址
+    // 使用对象→ 使用对象的属性或使用对象的方法
+    // stu2.sayHi();
+
+    // 创建第1个学生对象
+    var zs = new Student('张三', 10);
+    // 创建第2个学生对象
+    var ls = new Student('李四', 12);
+    // // 创建第3个学生对象
+    var ww = new Student('王五', 20);
+    ww.writeCode();
+
+
+    // 前提：对象在内存中占据空间。对象的成员的数量可以决定对象在内存中占据空间的大小。
+    // 在对象中，属性一般是变化的。 方法都是function，是不变的。
+    // 问题：对象的方法是不变的，每创建一个对象，都要存放3个方法，创建多个对象时，相对而言，会消耗内存。
+    // 原因：对象的方法是不变的
+    // 解决：想办法把不变的方法，抽取出来放在【原型】，让同类型的的对象共享即可。
+    
+  </script>
+</body>
+
+</html>
