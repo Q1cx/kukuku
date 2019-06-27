@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 类： Object 构造函数 → 类 → 抽象的名词
+    // 对象：new Object() 或 {} → 实例对象→ 具体的实例
+    // 对象组成：属性和方法
+    // 类和对象的关系：对象是类的一个实例，（对象属于类）
+    var obj = {
+      // 属性
+      name:'张三',
+      age:10,
+      // 方法
+      eat:function(){
+        alert('我会吃....')
+      },
+      sayHi:function(){
+        // 方法中的this指向调用者
+        console.log('我叫' + this.name)
+      }
+    };
+
+    obj.eat();
+
+    // obj的构造函数是 Object
+    console.log(obj instanceof Object);
+  </script>
+</body>
+</html>
