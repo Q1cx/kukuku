@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		var obj = {
+
+			name : '张三丰',
+			age : 22,
+			sex : '男',
+
+			taiji : function () {
+				alert('太极');
+			}
+
+		};
+
+		// 如果能够自动遍历，就会方便很多
+		for ( var key in obj) {
+
+			// obj.name【obj['name']】
+			alert ( obj[key] );
+
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

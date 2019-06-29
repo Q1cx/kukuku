@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+			// 1. 通过构造函数创建3个对象，并将3个对象放到数组中，最后再将数组中每一个对象的信息输出。
+			// 备注：
+				// 1. 对象的基本属性有  name ， gender , age
+			    // 2. 对象的信息需要从用户输入中获取
+			// [obj,obj,obj]
+			
+			// var arr= [];
+
+			// for (var i = 1; i <= 2; i++) {
+
+			// 	var obj = new Object();
+
+			// 	// 添加属性
+			// 	obj.name = prompt('姓名');
+			// 	obj.age = prompt('年龄');
+			// 	obj.sex = prompt('性别');
+
+			// 	// 放入到数组
+			// 	arr[arr.length] = obj;
+
+			// }
+
+			// console.log(arr);
+			// arr = [{},{},{}];
+			
+			for (var i = 0; i < arr.length; i++) {
+
+				// arr[i]是对象，继续遍历对象
+				for ( key in arr[i]) {
+
+					console.log( arr[i][key] );
+
+				}
+
+			}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
